@@ -1,6 +1,9 @@
-const API_KEY = 'AIzaSyCFFQbl06gM9bzlXB8wD_cBwIxNLO3AajM'; // Substitua pela sua chave de API
+require('dotenv').config();
+const API_KEY = process.env.API_KEY;
+
 const CX = 'd3040a7b20d424a36'; // Substitua pelo ID do mecanismo de pesquisa personalizado
 const GOOGLE_SEARCH_API_URL = 'https://www.googleapis.com/customsearch/v1';
+
 
 document.getElementById('search-button').addEventListener('click', async () => {
     const query = document.getElementById('search-input').value;
