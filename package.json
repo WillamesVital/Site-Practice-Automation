@@ -1,5 +1,26 @@
 {
   "dependencies": {
-    "dotenv": "^16.4.7"
-  }
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "dotenv-webpack": "^8.1.0",
+    "express": "^5.1.0",
+    "node-fetch": "^2.7.0"
+  },
+  "name": "site-practice-automation",
+  "version": "1.0.0",
+  "description": "Este projeto é uma aplicação web simples que permite o cadastro e login de usuários. Abaixo estão as instruções para configurar e executar o projeto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillamesVital/Site-Practice-Automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillamesVital/Site-Practice-Automation/issues"
+  },
+  "homepage": "https://github.com/WillamesVital/Site-Practice-Automation#readme"
 }
