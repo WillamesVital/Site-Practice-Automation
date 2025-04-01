@@ -1,3 +1,5 @@
+const BACKEND_URL = '/api/search'; // Endpoint serverless no Vercel
+
 document.getElementById('search-button').addEventListener('click', async () => {
     const query = document.getElementById('search-input').value;
     const resultsContainer = document.getElementById('search-results');
@@ -10,8 +12,7 @@ document.getElementById('search-button').addEventListener('click', async () => {
     }
 
     try {
-        const BACKEND_URL = 'http://localhost:3000'; // URL do servidor backend
-        const response = await fetch(`${BACKEND_URL}/search?q=${query}`);
+        const response = await fetch(`${BACKEND_URL}?q=${query}`);
         const data = await response.json();
 
         if (!data.items || data.items.length === 0) {
@@ -46,10 +47,3 @@ document.getElementById('clear-button').addEventListener('click', () => {
     searchInput.value = '';
     resultsContainer.innerHTML = '';
 });
-
-const query = 'teste';
-const BACKEND_URL = 'http://localhost:3000'; // URL do servidor backend
-fetch(`${BACKEND_URL}/search?q=${query}`)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Erro:', error));
