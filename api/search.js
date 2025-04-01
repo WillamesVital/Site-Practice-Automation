@@ -1,23 +1,4 @@
 require('dotenv').config();
-const express = require('express');
-const cors = require('cors'); // Importe o pacote cors
-
-const searchHandler = require('./searchHandler');
-
-app.use(cors()); // Permite todas as origens por padrão
-app.use(express.json());
-
-// Endpoint para realizar a pesquisa
-app.get('/search', searchHandler);
-
-// Inicia o servidor na porta 3000
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
-});
-
-// searchHandler.js
-require('dotenv').config();
 const fetch = require('node-fetch');
 
 const API_KEY = process.env.API_KEY; // Carrega a chave de API do ambiente
