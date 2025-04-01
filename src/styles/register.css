@@ -1,0 +1,228 @@
+@import url('./global.css');
+
+.container {
+    max-width: 1200px;
+    width: 70%; /* Garante responsividade */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: var(--color2); /* Fundo cinza claro */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Estilo para as linhas do formulário */
+.form-row {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os campos */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os campos quebrem para a próxima linha se necessário */
+}
+
+/* Estilo para os grupos de campos */
+.form-group {
+    flex: 1; /* Faz os campos ocuparem o mesmo espaço */
+    min-width: 0; /* Garante que os campos não ultrapassem o container */
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 8px; /* Aumenta o espaçamento entre o label e o input */
+    color: var(--color4); /* Texto em cinza médio */
+}
+
+/* Estilo para o grupo de inputs */
+.input-group {
+    position: relative; /* Necessário para posicionar o botão de alternar visibilidade */
+    display: flex;
+    align-items: center;
+}
+
+/* Ajuste para o botão de alternar visibilidade */
+.toggle-password {
+    position: absolute;
+    right: 10px; /* Posiciona o botão à direita do input */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    background: none;
+    border: none;
+    font-size: 18px; /* Tamanho do ícone */
+    cursor: pointer;
+    color: var(--color4); /* Cor do botão */
+    padding: 5px;
+}
+
+.toggle-password:hover {
+    color: var(--color5); /* Cor ao passar o mouse */
+}
+
+/* Ajuste para os inputs */
+.input, .select {
+    width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
+    padding: 12px; /* Espaçamento interno */
+    border: 1px solid var(--color3); /* Borda verde claro */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: var(--color2); /* Fundo cinza claro */
+    color: var(--color4); /* Texto em cinza médio */
+    box-sizing: border-box; /* Inclui o padding e a borda no tamanho total do input */
+}
+
+/* Ajuste para os inputs de upload de arquivo */
+.input-file {
+    width: 60%; /* Define a largura para 50%, igual ao campo de Foto de Perfil */
+    padding: 8px;
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: var(--color2);
+    color: var(--color4);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.input-file:hover {
+    border-color: var(--color5);
+}
+
+/* Estilo para o botão de apagar arquivo */
+.clear-button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
+.button {
+    background-color: var(--color5); /* Fundo azul claro */
+    color: var(--color1); /* Texto branco */
+    border: none;
+    padding: 8px 16px; /* Espaçamento interno do botão */
+    border-radius: 5px;
+    font-size: 14px; /* Tamanho da fonte */
+    width: 200px; /* Define uma largura fixa para o botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    margin: 0 auto; /* Centraliza o botão no container */
+}
+
+.button:hover {
+    background-color: var(--color3); /* Fundo verde claro no hover */
+    color: var(--color4); /* Texto cinza médio no hover */
+}
+
+.login-link {
+    margin-top: 20px; /* Aumenta o espaçamento acima do link */
+    font-size: 14px;
+    color: var(--color5); /* Azul claro */
+    text-align: center; /* Centraliza o link */
+}
+
+.login-link a {
+    color: var(--color5); /* Azul claro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+    color: var(--color3); /* Verde claro no hover */
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os checkboxes */
+    align-items: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaçamento entre o checkbox e o texto */
+    font-size: 14px; /* Tamanho do texto */
+    color: var(--color4); /* Cor do texto */
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Estilo para o textarea */
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--color2);
+    color: var(--color4);
+    box-sizing: border-box;
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+/* Estilo para o grupo de radio buttons */
+.radio-group {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os radio buttons */
+    align-items: center;
+}
+
+.radio-group label {
+    font-size: 14px;
+    color: var(--color4);
+}
+
+/* Ajuste para o campo de Portfólio ou GitHub */
+#portfolio {
+    width: 80%; /* Define uma largura menor para o campo */
+    padding: 12px; /* Espaçamento interno */
+    border: 1px solid var(--color3); /* Borda verde claro */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: var(--color2); /* Fundo cinza claro */
+    color: var(--color4); /* Texto em cinza médio */
+    box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
+}
+
+#portfolio:focus {
+    border-color: var(--color5); /* Muda a cor da borda ao focar no campo */
+    outline: none; /* Remove o outline padrão */
+}
+
+/* Estilo para o botão de ir para a Home */
+.home-button {
+    margin-top: 20px;
+    background-color: var(--color3); /* Fundo verde claro */
+    color: var(--color1); /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: var(--color5); /* Fundo azul claro no hover */
+}

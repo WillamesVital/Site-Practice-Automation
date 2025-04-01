@@ -1,0 +1,138 @@
+/* Paleta de Cores Claras */
+@import url('./global.css');
+
+:root {
+    --color1: #ffffff; /* Branco para fundo principal */
+    --color2: #f7f7f7; /* Cinza claro para containers */
+    --color3: #d1e7dd; /* Verde claro para destaques */
+    --color4: #6c757d; /* Cinza médio para texto */
+    --color5: #0d6efd; /* Azul claro para botões e links */
+}
+
+/* Estilo Geral */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Substitua pela fonte escolhida */
+    color: #333; /* Cor padrão do texto */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /** Fundo principal */
+    color: var(--color4); /* Texto padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--color2); /* Fundo do container */
+    border: 1px solid var(--color3);
+    border-radius: 8px;
+    padding: 3cqi;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: var(--color5); /* Título principal */
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+p {
+    color: var(--color4); /* Texto secundário */
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700; /* Negrito */
+}
+
+/* Botões de Navegação */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--color5); /* Fundo do botão */
+    color: var(--color1); /* Texto do botão */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--color3); /* Fundo ao passar o mouse */
+    color: var(--color4); /* Texto ao passar o mouse */
+}
+
+/* Botões */
+button {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+}
+
+/* Links Úteis */
+.useful-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.useful-links h2 {
+    font-size: 25px;
+    color: var(--color5); /* Título da seção */
+    margin-bottom: 20px;
+}
+
+.instructor {
+    margin-bottom: 30px;
+}
+
+.instructor-info {
+    align-items: center;
+    gap: 10px; /* Espaçamento entre a foto e o texto */
+    margin-bottom: 5px;
+}
+
+.instructor-photo {
+    width: 90px; /* Define o tamanho da foto */
+    height: 90px; /* Define o tamanho da foto */
+    border-radius: 60%; /* Torna a foto circular */
+    object-fit: cover; /* Garante que a imagem se ajuste ao container */
+    border: 2px solid var(--color3); /* Borda */
+}
+
+.instructor p {
+    margin: 0; /* Remove margens extras */
+    font-size: 20px;
+    color: var(--color4); /* Texto do nome do instrutor */
+}
+
+.link {
+    color: var(--color5); /* Cor dos links */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+.link i {
+    font-size: 18px; /* Tamanho do ícone */
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--color3); /* Cor ao passar o mouse */
+}

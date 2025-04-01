@@ -1,0 +1,103 @@
+@import url('./global.css');
+
+.container {
+    max-width: 400px;
+    width: 100%; /* Garante responsividade */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 50px;
+    background-color: var(--color2); /* Fundo cinza claro */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color4); /* Texto em cinza médio */
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--color2);
+    color: var(--color4);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--color5);
+}
+
+.button {
+    background-color: var(--color5); /* Fundo azul claro */
+    color: var(--color1); /* Texto branco */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--color3); /* Fundo verde claro no hover */
+    color: var(--color4); /* Texto cinza médio no hover */
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--color5); /* Azul claro */
+}
+
+.register-link a {
+    color: var(--color5); /* Azul claro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color: var(--color3); /* Verde claro no hover */
+}
+
+/* Estilo para o botão de ir para a Home */
+.home-button {
+    margin-top: 20px;
+    background-color: var(--color3); /* Fundo verde claro */
+    color: var(--color1); /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: var(--color5); /* Fundo azul claro no hover */
+}

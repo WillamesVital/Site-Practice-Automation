@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title" data-testid="register-title">Cadastro de Novo Usuário</h2>
+        <form id="registration-form" class="form" data-testid="registration-form">
+            <!-- Nome e E-mail lado a lado -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="username" class="label" data-testid="username-label">Nome de Usuário</label>
+                    <input type="text" id="username" class="input" data-testid="username-input" placeholder="Digite seu nome de usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="label" data-testid="email-label">E-mail</label>
+                    <input type="email" id="email" class="input" data-testid="email-input" placeholder="Digite seu e-mail" required>
+                </div>
+            </div>
+
+            <!-- Senha e Confirmar Senha lado a lado -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password" class="label" data-testid="password-label">Senha</label>
+                    <div class="input-group">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            class="input" 
+                            data-testid="password-input" 
+                            placeholder="Digite sua senha" 
+                            required 
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}" 
+                            title="A senha deve ter pelo menos 8 caracteres, incluindo 1 letra maiúscula, 1 letra minúscula e 1 número."
+                        >
+                        <button type="button" id="toggle-password" class="toggle-password" data-testid="toggle-password">👁️</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password" class="label" data-testid="confirm-password-label">Confirmar Senha</label>
+                    <div class="input-group">
+                        <input 
+                            type="password" 
+                            id="confirm-password" 
+                            class="input" 
+                            data-testid="confirm-password-input" 
+                            placeholder="Confirme sua senha" 
+                            required
+                        >
+                        <button type="button" id="toggle-confirm-password" class="toggle-password" data-testid="toggle-confirm-password">👁️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telefone e Data de Nascimento lado a lado -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone" class="label" data-testid="phone-label">Telefone</label>
+                    <input type="tel" id="phone" class="input" data-testid="phone-input" placeholder="Digite seu telefone" required pattern="[0-9]{10,11}" title="Digite um número de telefone válido com 10 ou 11 dígitos.">
+                </div>
+                <div class="form-group">
+                    <label for="birthdate" class="label" data-testid="birthdate-label">Data de Nascimento</label>
+                    <input type="date" id="birthdate" class="input" data-testid="birthdate-input" required>
+                </div>
+            </div>
+
+            <!-- Campo para upload de foto e currículo lado a lado -->
+            <div class="form-row">
+                <!-- Foto de Perfil -->
+                <div class="form-group">
+                    <label for="profile-photo" class="label" data-testid="profile-photo-label">Foto de Perfil</label>
+                    <div class="input-group">
+                        <input 
+                            type="file" 
+                            id="profile-photo" 
+                            class="input-file" 
+                            data-testid="profile-photo-input" 
+                            accept="image/*" 
+                            required
+                        >
+                        <button 
+                            type="button" 
+                            id="clear-photo" 
+                            class="clear-button" 
+                            data-testid="clear-photo-button"
+                        >
+                            Apagar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Currículo ou Certificados -->
+                <div class="form-group">
+                    <label for="resume" class="label" data-testid="resume-label">Currículo ou Certificados</label>
+                    <div class="input-group">
+                        <input 
+                            type="file" 
+                            id="resume" 
+                            class="input-file" 
+                            data-testid="resume-input" 
+                            accept=".pdf,.doc,.docx" 
+                            required
+                        >
+                        <button 
+                            type="button" 
+                            id="clear-resume" 
+                            class="clear-button" 
+                            data-testid="clear-resume-button"
+                        >
+                            Apagar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo País e Portfólio ou GitHub lado a lado -->
+            <div class="form-row">
+                <!-- País -->
+                <div class="form-group">
+                    <label for="country" class="label" data-testid="country-label">País</label>
+                    <select id="country" class="select" data-testid="country-select">
+                        <option value="" disabled selected>Selecione seu país</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="eua">Estados Unidos</option>
+                        <option value="canada">Canadá</option>
+                        <option value="mexico">México</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="espanha">Espanha</option>
+                        <option value="franca">França</option>
+                        <option value="alemanha">Alemanha</option>
+                        <option value="italia">Itália</option>
+                        <option value="japao">Japão</option>
+                    </select>
+                </div>
+
+                <!-- Portfólio ou GitHub -->
+                <div class="form-group">
+                    <label for="portfolio" class="label" data-testid="portfolio-label">Portfólio ou GitHub</label>
+                    <input 
+                        type="url" 
+                        id="portfolio" 
+                        class="input" 
+                        data-testid="portfolio-input" 
+                        placeholder="https://github.com/seu-usuario" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <!-- Gênero e Experiência em Automação lado a lado -->
+            <div class="form-row">
+                <!-- Gênero -->
+                <div class="form-group">
+                    <label class="label" data-testid="gender-label">Gênero</label>
+                    <div class="checkbox-group" data-testid="gender-checkbox-group">
+                        <label for="gender-masculino" class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                id="gender-masculino" 
+                                name="gender" 
+                                value="masculino" 
+                                class="checkbox" 
+                                data-testid="gender-masculino-checkbox"
+                            >
+                            Masculino
+                        </label>
+                        <label for="gender-feminino" class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                id="gender-feminino" 
+                                name="gender" 
+                                value="feminino" 
+                                class="checkbox" 
+                                data-testid="gender-feminino-checkbox"
+                            >
+                            Feminino
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Experiência em Automação -->
+                <div class="form-group">
+                    <label class="label" data-testid="experience-label">Experiência em Automação</label>
+                    <div class="radio-group" data-testid="experience-radio-group">
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="experience" 
+                                value="iniciante" 
+                                data-testid="experience-iniciante-radio" 
+                                required
+                            >
+                            Iniciante
+                        </label>
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="experience" 
+                                value="intermediario" 
+                                data-testid="experience-intermediario-radio"
+                            >
+                            Intermediário
+                        </label>
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="experience" 
+                                value="avancado" 
+                                data-testid="experience-avancado-radio"
+                            >
+                            Avançado
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objetivos no Curso -->
+            <div class="form-group">
+                <label for="goals" class="label" data-testid="goals-label">Objetivos no Curso</label>
+                <textarea 
+                    id="goals" 
+                    class="textarea" 
+                    data-testid="goals-textarea" 
+                    placeholder="Descreva seus objetivos ao participar do curso..." 
+                    rows="4" 
+                    required
+                ></textarea>
+            </div>
+
+            <!-- Aceitação dos Termos -->
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input 
+                        type="checkbox" 
+                        id="terms" 
+                        class="checkbox" 
+                        data-testid="terms-checkbox" 
+                        required
+                    >
+                    Eu aceito os<a href="https://drive.google.com/file/d/1uACSQXH754H2aCC2sSHzGkw0Ys8Ac_n9/view?usp=sharing" target="_blank">termos e condições.</a>
+                </label>
+            </div>
+
+            <button type="submit" class="button" data-testid="register-button">Cadastrar</button>
+        </form>
+        <p class="register-link" data-testid="register-login-link">
+            Já tem uma conta? <a href="login.html">Faça login aqui</a>
+        </p>
+        <!-- Botão para ir para a Home Page -->
+        <button 
+            type="button" 
+            class="button home-button" 
+            data-testid="home-button" 
+            onclick="window.location.href='index.html'"
+        >
+            Ir para a Home
+        </button>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

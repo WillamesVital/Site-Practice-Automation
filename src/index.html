@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Automação de Testes</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Adicionando Font Awesome para os ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" data-testid="container">
+        <!-- Logotipo -->
+        <h1 data-testid="course-title">Curso Prático de Automação de Testes com Playwright</h1>
+        <p data-testid="course-description">
+            Bem-vindo ao nosso curso prático de automação de testes com Playwright. 
+            Aprenda desde os fundamentos até técnicas avançadas para criar testes eficientes e confiáveis.
+        </p>
+
+        <!-- Botões de Navegação -->
+        <div class="navigation" data-testid="navigation">
+            <a href="login.html" class="button" data-testid="welcome-login-button">Login</a>
+            <a href="register.html" class="button" data-testid="welcome-register-button">Cadastre-se</a>
+            <a href="search.html" class="button" data-testid="welcome-register-button">Pesquisa</a>
+
+        </div>
+
+        <!-- Links Úteis -->
+        <div class="useful-links" data-testid="useful-links">
+            <h2 data-testid="instructors-title">Instrutores</h2>
+
+            <!-- Primeiro Instrutor -->
+            <div class="instructor" data-testid="instructor-willames">
+                <div class="instructor-info" data-testid="instructor-info-willames">
+                    <img src="images/willames.jpeg" alt="Foto de Willames Vital" class="instructor-photo" data-testid="instructor-photo-willames">
+                    <p data-testid="instructor-name-willames"><strong>Willames Vital</strong></p>
+                </div>
+                <p data-testid="instructor-links-willames">
+                    <a href="https://www.linkedin.com/in/willames-vital/" target="_blank" class="link" data-testid="linkedin-link-willames">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    |
+                    <a href="https://www.youtube.com/@willamesvitalqa" target="_blank" class="link" data-testid="youtube-link-willames">
+                        <i class="fab fa-youtube"></i> Canal no YouTube
+                    </a>
+                </p>
+            </div>
+
+            <!-- Segundo Instrutor -->
+            <div class="instructor" data-testid="instructor-samuel">
+                <div class="instructor-info" data-testid="instructor-info-samuel">
+                    <img src="images/samuel.jpeg" alt="Foto de Samuel Melo" class="instructor-photo" data-testid="instructor-photo-samuel">
+                    <p data-testid="instructor-name-samuel"><strong>Samuel Melo</strong></p>
+                </div>
+                <p data-testid="instructor-links-samuel">
+                    <a href="https://www.linkedin.com/in/samuelmelojr/" target="_blank" class="link" data-testid="linkedin-link-samuel">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    |
+                    <a href="https://www.youtube.com/@samuelmeloqa" target="_blank" class="link" data-testid="youtube-link-samuel">
+                        <i class="fab fa-youtube"></i> Canal no YouTube
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
