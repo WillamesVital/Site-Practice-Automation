@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors'); // Importe o pacote cors
-const app = express();
 
 const searchHandler = require('./searchHandler');
 
@@ -16,9 +15,7 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
-```
 
-```javascript
 // searchHandler.js
 require('dotenv').config();
 const fetch = require('node-fetch');
